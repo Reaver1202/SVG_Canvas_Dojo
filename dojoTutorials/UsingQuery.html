@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Demo: DOM Functions</title>
+        <script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"
+            data-dojo-config="async: true">
+        </script>
+        <script>
+            require(["dojo/domReady!"], function() {
+ 
+            });
+        </script>
+    </head>
+    <body>
+    	<a href="../index.html">Back</a> <br><br>
+		<h4>1.1) A NodeList</h4>
+		<div id="list3">
+		    <div class="odd">One</div>
+		    <div class="even">Two</div>
+		    <div class="odd">Three</div>
+		    <div class="even">Four</div>
+		    <div class="odd">Five</div>
+		    <div class="even">Six</div>
+		</div>
+		<button id="oddForEach">query(".odd").forEach(...)</button><br />
+		<button id="evenAddBlue">query(".even").addClass("blue")</button><br />
+		<button id="oddAddBlue">query(".odd").removeClass("red").addClass("blue")</button><br />
+		<button id="evenStyle">query(".even").style("color", "white").addClass("italic")</button><br />
+		<br>
+		<button class="hookUp demoBtn">Click Me!</button>
+		<button class="hookUp demoBtn">Click Me!</button>
+		<button class="hookUp demoBtn">Click Me!</button>
+		<button class="hookUp demoBtn">Click Me!</button>
+		<script>
+		    // Wait for the DOM to be ready before working with it
+		    require(["dojo/query", "dojo/domReady!"], function(query) {
+		        query(".hookUp").on("click", function(){
+		            alert("This button is hooked up!");
+		        });
+		    });
+		</script>
+		<ul id="list">
+		    <li class="odd">
+		        <div class="bold">
+		            <a class="odd">Odd</a>
+		        </div>
+		    </li>
+		    <li class="even">
+		        <div class="italic">
+		            <a class="even">Even</a>
+		        </div>
+		    </li>
+		    <li class="odd">
+		        <a class="odd">Odd</a>
+		    </li>
+		    <li class="even">
+		        <div class="bold">
+		            <a class="even">Even</a>
+		        </div>
+		    </li>
+		    <li class="odd">
+		        <div class="italic">
+		            <a class="odd">Odd</a>
+		        </div>
+		    </li>
+		    <li class="even">
+		        <a class="even">Even</a>
+		    </li>
+		</ul>
+		
+		<ul id="list2">
+		    <li class="odd">Odd</li>
+		</ul>
+		
+		<!-- CSS classes to use them with dojo/query-->
+		<style type="text/css">
+			.blue{
+				background-color: blue;
+			}
+			.red{
+				background-color: red;
+			}
+			.italic{
+				font: 20px italic;
+			}
+		</style>
+		<script src="../dojo_tutorials.js"></script>
+		
+	</body>
+</html>

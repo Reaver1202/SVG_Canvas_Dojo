@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Demo: DOM Functions</title>
+        <script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"
+            data-dojo-config="async: true">
+        </script>
+        <script>
+        	require(["dojo/on", "dojo/dom", "dojo/dom-style", "dojo/mouse", "dojo/domReady!"],
+			    function(on, dom, domStyle, mouse) {
+			        var myButton = dom.byId("myButton"),
+			            myDiv = dom.byId("myDiv");
+			 
+			        on(myButton, "click", function(evt){
+			            domStyle.set(myDiv, "backgroundColor", "blue");
+			        });
+			        on(myDiv, mouse.enter, function(evt){
+			            domStyle.set(myDiv, "backgroundColor", "red");
+			        });
+			        on(myDiv, mouse.leave, function(evt){
+			            domStyle.set(myDiv, "backgroundColor", "");
+			        });
+			});
+        </script>
+    </head>
+    <body>
+		<a href="../index.html">Back</a> <br><br>
+		<button id="myButton">Click me!</button>
+<div id="myDiv">Hover over me!</div>
+	</body>
+</html>

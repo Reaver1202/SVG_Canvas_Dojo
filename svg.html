@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Testing SVG</title>
+	</head>
+    <body>
+        <h1>MY SVG (Scalable Vector Graphics)</h1>
+        <a href="index.html">Back</a> <br>
+        
+        <h2>Works on IE and Chrome:</h2>
+        <br>Code directly coded and not outsourced into external files:
+        
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100">
+  			<rect width="300" height="50" 
+			style="fill:rgb(0,0,255);stroke-width:5;stroke:rgb(255,0,0)"/>
+		</svg>
+		
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100">
+			<circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
+		</svg>
+		
+			
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+		  <polygon points="100,10 40,180 190,60 10,60 160,180"
+		  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+		</svg>
+		
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="200">
+		  <ellipse cx="240" cy="100" rx="220" ry="30" style="fill:purple"/>
+		  <ellipse cx="220" cy="70" rx="190" ry="20" style="fill:lime"/>
+		  <ellipse cx="210" cy="45" rx="170" ry="15" style="fill:yellow"/>
+		</svg>
+		
+		
+		<hr>
+		<h1>IE? then here is content that not works in Chrome:</h1>
+		<script type="text/javascript">
+		  if ( navigator.userAgent.indexOf("MSIE")>0 )
+		  {
+		    // Run custom code for Internet Explorer.
+		
+			document.write(" "+
+				"<br>As Embed <br>"+
+				"<embed src='SVGs/circle.svg'></embed>"+
+				"<br>As Object:<br>"+
+				"<object data='SVGs/circle.svg' type='image/svg+xml'></object>"+
+				"<br>As IFrame<br>"+
+				"<iframe src='SVGs/circle.svg'></iframe>");
+		          }
+		</script>
+    </body>
+</html>
