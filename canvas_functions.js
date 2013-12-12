@@ -1,6 +1,6 @@
  function draw_b() {
-  var b_canvas = document.getElementById("a");
-  var b_context = b_canvas.getContext("2d");
+  var 	b_canvas = document.getElementById("a"),
+   		b_context = b_canvas.getContext("2d");
   b_context.fillRect(50, 25, 150, 100);
 }
 

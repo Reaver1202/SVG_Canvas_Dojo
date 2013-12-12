@@ -1,0 +1,49 @@
+.FinalInputEl{
+	background-color:#FFCC00;
+}
+.FIE_name{
+	font-weight: bold;
+	font-family: Arial;
+	font-size: medium; 
+}
+.FIE_input{
+
+}
+
+
+
+.TestInputEl{
+	background-color:#0099FF;
+	font.color: #FFFF00;
+}
+.TIE_name{
+	font-weight: bold;
+	font-family: Arial;
+	font-size: medium; 
+}
+.TIE_input{
+	
+}
+
+
+
+.TestInputSubEl{
+	background-color:#00CCFF;
+}
+.TISE_name{
+	font-family: Arial;
+	font-size: small; 
+}
+.TISE_input{
+	
+}
+
+.TestButtonEl{
+	background-color:#00CC55;
+}
+.TBE_submit{
+	
+}
+.TBE_reset{
+	
+}

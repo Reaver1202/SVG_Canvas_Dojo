@@ -5,22 +5,29 @@
 		<title>Testing SVG</title>
 	</head>
     <body>
+    	<a href="index.html">Back</a> <br>
+		<hr>
         <h1>MY SVG (Scalable Vector Graphics)</h1>
-        <a href="index.html">Back</a> <br>
+
         
         <h2>Works on IE and Chrome:</h2>
         <br>Code directly coded and not outsourced into external files:
-        
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100">
-  			<rect width="300" height="50" 
-			style="fill:rgb(0,0,255);stroke-width:5;stroke:rgb(255,0,0)"/>
-		</svg>
-		
-		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100">
-			<circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
-		</svg>
-		
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="200">
+	        <svg>
+	  			<rect width="300" height="50" 
+				style="fill:rgb(0,0,255);stroke-width:5;stroke:rgb(255,0,0)"/>
+			</svg>
 			
+			<svg >
+				<circle cx="100" cy="150" r="40" stroke="black" stroke-width="2" fill="red"/>
+			</svg>
+			<text x="20" y="100" font-size="1.1em">
+			    C<tspan id="textID" baseline-shift="sub">12</tspan>
+			    H<tspan baseline-shift="sub">22</tspan>
+			    O<tspan baseline-shift="sub">11</tspan> (Sugar)
+			  </text>
+		</svg>
+			<script> document.getElementById("textID").value = "huhu";</script>
 		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
 		  <polygon points="100,10 40,180 190,60 10,60 160,180"
 		  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>

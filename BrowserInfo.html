@@ -1,0 +1,181 @@
+<html>
+	<body>
+<a href="index.html">Back</a> 
+		<script>
+			document.write("<b>  Screen Info: </b> Height: "+screen.availHeight + "  Width: "+ screen.availWidth  );
+			document.write("<b>  Window Info: </b> Height: "+window.innerHeight + "  Width: "+ window.innerWidth);
+		</script>
+		<br>
+<hr>
+
+
+<table border="0" width="400">
+  <tr>
+    <td width="100%" align="center"><font face="Arial" size="3"><b>Browser Informationen</b></font></td>
+  </tr>
+  <tr>
+    <td width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" width="100%" style="border: 1px solid #CCCCCC">
+        <tr>
+          <td width="100%" colspan="2"><font face="Arial" size="2"><b><u>allgemeine Informationen:</u></b></font></td>
+        </tr>
+        <tr>
+          <td width="120" align="right"><font face="Arial" size="2"><b>Browsertyp:</b></font></td>
+          <td width="280">
+<script type="text/javascript">
+
+/*
+© Valentin Hammer
+Originalversion auf http://www.supermario.homepage.eu
+*/
+
+var Benutzeragent14 = navigator.userAgent.toLowerCase();
+var Browsernamen14 = new Array("Konqueror","SeaMonkey","Firebird","Galeon","Epiphany","Camino","OmniWeb","Chrome","Iron","Lynx","amaya","iCab","Netscape","Navigator","MSIE","Firefox","Opera","Safari","rv:","Mozilla");
+var Namensindex14 = -1;
+
+for(var i=0;i<19;i++)
+{
+if(Benutzeragent14.indexOf(Browsernamen14[i].toLowerCase())>-1)
+{
+Namensindex14 = i;
+break;
+}
+}
+
+document.write(unescape('%3Cfont face="Arial" size="2">'+(Namensindex14<0 ? "unbekannt":(Namensindex14==13 ? "Netscape":(Namensindex14==14 ? "Internet Explorer":(Namensindex14==18 ? "Mozilla":Browsernamen14[Namensindex14]))))+'%3C/font>'));
+
+</script></td>
+        </tr>
+        <tr>
+          <td width="120" align="right"><font face="Arial" size="2"><b>Browser-Version:</b></font></td>
+          <td width="280">
+<script type="text/javascript">
+
+function Versionsausgabe14(Text14)
+{
+if(parseInt(Text14.charAt(0))+""=="NaN")
+Text14 = Text14.substring(1);
+
+if(parseInt(Text14.charAt(0))+""!="NaN")
+{
+var i = 0;
+
+while(parseInt(Text14.charAt(i))+""!="NaN"||Text14.charAt(i)==".")
+i++;
+
+Text14 = Text14.substring(0,i);
+}
+if(parseInt(Text14)+""=="NaN")
+Text14 = "unbekannt";
+
+return Text14;
+}
+
+with(Benutzeragent14)
+{
+if(indexOf("version")>-1)
+Browsernamen14[Namensindex14] = "version";
+
+document.write(unescape('%3Cfont face="Arial" size="2">'+(Namensindex14>-1 ? Versionsausgabe14(substring(indexOf(Browsernamen14[Namensindex14].toLowerCase())+(Browsernamen14[Namensindex14]+"*").indexOf("*"))):"unbekannt")+'%3C/font>'));
+}
+
+</script></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" width="100%" style="border: 1px solid #CCCCCC">
+        <tr>
+          <td width="100%" colspan="2"><font face="Arial" size="2"><b><u>Browsereigene Angaben:</u></b></font></td>
+        </tr>
+        <tr>
+          <td width="120" align="right"><font face="Arial" size="2"><b>Browsername:</b></font></td>
+          <td width="280">
+<script type="text/javascript">
+
+document.write(unescape('%3Cfont face="Arial" size="2">'+navigator.appName+'%3C/font>'));
+
+</script></td>
+        </tr>
+        <tr>
+          <td width="120" align="right"><font face="Arial" size="2"><b>Spitzname:</b></font></td>
+          <td width="280">
+<script type="text/javascript">
+
+document.write(unescape('%3Cfont face="Arial" size="2">'+navigator.appCodeName+'%3C/font>'));
+
+</script></td>
+        </tr>
+        <tr>
+          <td width="120" align="right"><font face="Arial" size="2"><b>Mozilla-Version:</b></font></td>
+          <td width="280">
+<script type="text/javascript">
+
+with(Benutzeragent14)
+document.write(unescape('%3Cfont face="Arial" size="2">'+(indexOf("mozilla")>-1 ? Versionsausgabe14(substring(indexOf("mozilla")+7)):"unbekannt")+'%3C/font>'));
+
+</script></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" width="100%" style="border: 1px solid #CCCCCC">
+        <tr>
+          <td width="100%" colspan="2"><font face="Arial" size="2"><b><u>Informationen über Details:</u></b></font></td>
+        </tr>
+        <tr>
+          <td width="120" align="right" valign="top"><font face="Arial" size="2"><b>Cookies elaubt:</b></font></td>
+          <td width="280">
+<script type="text/javascript">
+
+document.write(unescape('%3Cfont face="Arial" size="2">'+(navigator.cookieEnabled||navigator.cookieEnabled==false ? (navigator.cookieEnabled ? "Ja":"Nein"):"Der Browser kann diese Eigenschaft nicht auslesen.")+'%3C/font>'));
+
+</script></td>
+        </tr>
+        <tr>
+          <td width="120" align="right" valign="top"><font face="Arial" size="2"><b>Browsersprache:</b></font></td>
+          <td width="280">
+<script type="text/javascript">
+
+document.write(unescape('%3Cfont face="Arial" size="2">'+(navigator.language ? navigator.language:"Der Browser kann diese Eigenschaft nicht auslesen.")+'%3C/font>'));
+
+</script></td>
+        </tr>
+        <tr>
+          <td width="120" align="right" valign="top"><font face="Arial" size="2"><b>Betriebssystem:</b></font></td>
+          <td width="280">
+<script type="text/javascript">
+
+document.write(unescape('%3Cfont face="Arial" size="2">'+(navigator.platform ? navigator.platform:"Der Browser kann diese Eigenschaft nicht auslesen.")+'%3C/font>'));
+
+</script></td>
+        </tr>
+        <tr>
+          <td width="120" align="right" valign="top"><font face="Arial" size="2"><b>Benutzer-Agent</b></font></td>
+          <td width="280">
+<script type="text/javascript">
+
+document.write(unescape('%3Cfont face="Arial" size="2">'+navigator.userAgent+'%3C/font>'));
+
+</script></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

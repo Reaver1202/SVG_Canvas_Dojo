@@ -32,10 +32,15 @@
     			createGraphIMG();
     		};
     	</script>
-    	
+    	<a href="index.html">Back</a> 
+		<script>
+			document.write("<b>  Screen Info: </b> Height: "+screen.availHeight + "  Width: "+ screen.availWidth  );
+			document.write("<b>  Window Info: </b> Height: "+window.innerHeight + "  Width: "+ window.innerWidth);
+		</script>
+		<br>
+		<hr>
         <h1>My Canvas</h1>
-        <a href="index.html">Back</a> <br>
-        
+       
         <form id="drawGraph">
         	Height: <input type="text" value="300" id="graphHeight_input"/><br>
         	Width:	<input type="text" value="500" id="graphWidth_input" /><br>
